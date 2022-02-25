@@ -1,10 +1,12 @@
 <?php 
-    class Home {
+    class Home extends Controller {
         function SayHi()  {
-            echo "Home - SayHi";
+            $a = $this-> model("StudentModel");
+            echo $a -> GetStudent();
         }
-        function Show() {
-            echo "Home - Show";
+        function Show($a, $b) {
+            $t = $this -> model("StudentModel");
+            echo $t ->TinhTong($a, $b);
         }
     }
 ?>

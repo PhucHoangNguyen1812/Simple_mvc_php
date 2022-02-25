@@ -16,6 +16,7 @@ class App {
             }
         }
         require_once ("./mvc/controllers/". $this->controller .".php");
+        $this->controller = new $this->controller;
 
         //handle Action
         if(isset($arr[1])) {
