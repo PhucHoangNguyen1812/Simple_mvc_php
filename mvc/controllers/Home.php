@@ -6,7 +6,12 @@
         }
         function Show($a, $b) {
             $t = $this -> model("StudentModel");
-            echo $t ->TinhTong($a, $b);
+            $tong = $t ->TinhTong($a, $b);
+            $this->view("StudentView",
+            [   "Page" => "dashboard",
+                "Number" => $tong,
+                "Stu" => $t -> StudentList(),
+            ]);
         }
     }
 ?>
