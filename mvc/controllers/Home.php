@@ -8,9 +8,10 @@
             $t = $this -> model("StudentModel");
             $tong = $t ->TinhTong($a, $b);
             $this->view("StudentView",
-            [   "Page" => "dashboard",
+            [   
+                "Page" => "dashboard",
                 "Number" => $tong,
-                "Stu" => $t -> StudentList(),
+                "Stu" => $t -> Student(),
             ]);
         }
     }

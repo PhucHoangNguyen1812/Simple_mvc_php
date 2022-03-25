@@ -20,7 +20,7 @@ class App {
 
         //handle Action
         if(isset($arr[1])) {
-            if(method_exists($this -> controller,$arr[1])) {
+            if(method_exists($this -> controller, $arr[1])) {
                 $this -> action = $arr[1];
                 
             }
